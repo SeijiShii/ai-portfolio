@@ -2,6 +2,8 @@
 
 This repository is the source for [my AI-driven development portfolio site](https://seijishii.github.io/ai-portfolio/), built as a single static page and deployed via **GitHub Pages**.
 
+> 🤖 **This portfolio site itself was also built with Claude Code** — Claude Code inspected my local service codebases (git history, source files, design docs) and generated the HTML / CSS / content / git setup interactively in a single conversation. Consider it a live sample of the AI-driven workflow described inside.
+
 It showcases two production services I built end-to-end with Claude Code / Cursor as my development partner:
 
 | Service | URL | Description |
