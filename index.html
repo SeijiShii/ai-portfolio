@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>四伊清司 — AI駆動開発ポートフォリオ</title>
+  <meta name="description" content="AI駆動開発（Claude Code / Cursor）で個人開発した2サービスのポートフォリオ。Go / Astro / Flutter / Stripe / PostgreSQL を用いたフルスタック実装。" />
+  <meta property="og:title" content="四伊清司 — AI駆動開発ポートフォリオ" />
+  <meta property="og:description" content="ドキュメント駆動の AI 開発ワークフロー（SPEC → PLAN → TEST → IMPL → REVIEW）で2つの本番サービスを個人開発。" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="assets/img/givers-logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="brand">
+        <span class="brand-mark">SS</span>
+        <span class="brand-text">Seiji Shii</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#workflow">AI Workflow</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#metrics">Metrics</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">AI駆動開発ポートフォリオ <span class="dot">·</span> 2025–2026</p>
+        <h1 class="hero-title">
+          <span class="accent">AI 駆動開発の在り方を模索</span>しながら、<br />
+          2本のサービスを個人開発で<br />本番運用まで届けました。
+        </h1>
+        <p class="hero-sub">
+          1本目（UNOES）は約1年かけて、<strong>ChatGPT（コピペ） → Cursor AI → Claude Code</strong> と AI ツールを乗り換えながら手探りで開発。
+          そこで確立した<strong>ドキュメント駆動の AI 開発ワークフロー</strong>（SPEC → PLAN → TEST → IMPL → REVIEW）を、
+          2本目（GIVErS）では当初から適用し、MVP 公開までを約1ヶ月で実現しました。
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#services">サービスを見る</a>
+          <a class="btn btn-ghost" href="#workflow">開発ワークフロー</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">1年</div>
+            <div class="stat-label">1本目 (UNOES)<small>2025/04 – 2026/04 / 模索期</small></div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2週間</div>
+            <div class="stat-label">2本目 (GIVErS)<small>Claude Code でMVP本番投入</small></div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">~70k</div>
+            <div class="stat-label">行のコード<small>Go / TS / Astro / Dart 合算</small></div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5</div>
+            <div class="stat-label">配信ターゲット<small>iOS/Android/Web/Windows/API</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">運用中のサービス</h2>
+        <p class="section-lead">
+          いずれも企画・設計・実装・インフラ・本番運用までを個人で担当。
+          UNOES での「模索」を経て、GIVErS では確立済みのワークフローで一気に立ち上げています。
+        </p>
+
+        <article class="service service-unoes-story">
+          <header class="service-head">
+            <img src="assets/img/unoes-logo.png" alt="UNOES logo" class="service-logo" />
+            <div>
+              <h3 class="service-name">UNOES Dictionary <span class="badge badge-live">Live</span> <span class="badge badge-story">1st service / 模索期</span></h3>
+              <p class="service-tag">AI ツールを乗り換えながら、約1年かけて本番投入したマルチプラットフォーム辞書アプリ</p>
+            </div>
+          </header>
+
+          <p class="service-desc">
+            UNOES は私にとって最初の本格的な AI 駆動開発プロジェクトです。
+            <strong>2025年4月〜2026年4月</strong>、中断期間を含むおよそ1年間で、
+            iOS / Android / Web / Windows をターゲットにした辞書アプリと Go バックエンドを個人開発しました。
+            「AI 駆動開発はどう進めるべきか」を答えのないまま模索した期間でもあり、
+            ツールを乗り換えるたびに開発スタイルが大きく変わっていきました。
+          </p>
+
+          <div class="timeline">
+            <div class="tl-step tl-step-1">
+              <div class="tl-label">Phase 1 <span>2025/04 – 2025/夏</span></div>
+              <div class="tl-tool">ChatGPT（コード生成→コピペ）</div>
+              <p>仕様や設計の壁打ち、コード片を ChatGPT に書かせてエディタに貼る、というスタイル。手戻りも多く、コードベース全体の文脈は AI 側に残せませんでした。</p>
+            </div>
+            <div class="tl-step tl-step-2">
+              <div class="tl-label">Phase 2 <span>2025/夏 – 2025/秋</span></div>
+              <div class="tl-tool">Cursor AI（IDE 内 AI 補助）</div>
+              <p>エディタ統合の AI に切り替え、コードベース全体を参照させながら編集できるようになり生産性が大幅向上。ただしレビュー観点は属人化したまま。</p>
+            </div>
+            <div class="tl-step tl-step-3">
+              <div class="tl-label">Phase 3 <span>2025/秋 – 2026/04</span></div>
+              <div class="tl-tool">Claude Code（エージェント駆動）</div>
+              <p>Claude Code に移行し、<code>CLAUDE.md</code> / memory にプロジェクト固有ルールを残し、機能ごとに <code>SPEC → PLAN → TEST → IMPL → REVIEW</code> を Markdown で蓄積する現在のスタイルを確立。</p>
+            </div>
+          </div>
+
+          <p class="service-desc">
+            この模索期に得たのは「AI に書かせる」ではなく「AI と一緒に意思決定を文書で残す」開発スタイルでした。
+            次の GIVErS では最初からこのワークフローを適用しています。
+          </p>
+
+          <ul class="service-features">
+            <li>JWT + リフレッシュトークン認証（admin / editor / subscriber / guest ロール）</li>
+            <li>Stripe / Google Play 両プロバイダーのサブスク（解約 / 期限切れ / ロール降格を一元管理）</li>
+            <li>IP 単位 + 経路別レート制限による DOS 対策ミドルウェア</li>
+            <li>辞書エントリの4段階編集ステータス（draft / review / published / archived）とフィルタ</li>
+            <li>全操作の監査ログとフィードバック機能</li>
+            <li>Web 版 Google ログイン（admin / editor 向け）、AdSense ネイティブ広告、リワード広告</li>
+            <li>Flutter から iOS / Android / Web / Windows へワンソース配信</li>
+          </ul>
+
+          <div class="service-meta">
+            <div class="meta-block">
+              <div class="meta-label">ライブURL</div>
+              <a class="meta-link" href="https://unoes.net/" target="_blank" rel="noopener">unoes.net ↗</a>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">リポジトリ</div>
+              <div class="repo-list">
+                <a class="meta-link" href="https://github.com/SeijiShii/unoes_app" target="_blank" rel="noopener">github.com/SeijiShii/unoes_app ↗ <span class="badge badge-private">Private</span></a>
+                <a class="meta-link" href="https://github.com/SeijiShii/unoes_dictionary_android" target="_blank" rel="noopener">github.com/SeijiShii/unoes_dictionary_android ↗ <span class="badge badge-private">Private</span></a>
+              </div>
+              <p class="meta-note">Private リポジトリのため、コードベース全体は採用ご担当者様へ別途共有可能です。</p>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">主要技術</div>
+              <div class="chip-row">
+                <span class="chip">Go (Gin)</span>
+                <span class="chip">Flutter 3.x</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">JWT</span>
+                <span class="chip">Stripe</span>
+                <span class="chip">Google Play Billing</span>
+                <span class="chip">AdSense / AdMob</span>
+                <span class="chip">Docker</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">開発規模</div>
+              <ul class="meta-list">
+                <li>Backend Go: <strong>約 18,000 行</strong>（125ファイル / サービス層 24本）</li>
+                <li>Flutter: <strong>約 27,700 行</strong>（128ファイル / 画面ウィジェット 36本）</li>
+                <li>コミット: backend <strong>127</strong> / frontend <strong>110</strong></li>
+                <li>期間: <strong>2025/04 – 2026/04（中断含めて約1年）</strong></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="service service-givers">
+          <header class="service-head">
+            <img src="assets/img/givers-logo.png" alt="GIVErS logo" class="service-logo" />
+            <div>
+              <h3 class="service-name">GIVErS <span class="badge badge-live">Live</span> <span class="badge badge-story">2nd service / 確立後</span></h3>
+              <p class="service-tag">ゼロ手数料の寄付プラットフォーム — Claude Code で約2週間立ち上げ</p>
+            </div>
+          </header>
+
+          <p class="service-desc">
+            UNOES で確立したワークフローを最初から適用し、<strong>最初の1行から Claude Code と共に書き始めた</strong>2本目のサービス。
+            企画・設計・実装・本番デプロイ（VPS / TLS / DB / Stripe Connect）までを<strong>約2週間で立ち上げ</strong>、現在は <a href="https://givers.work/" target="_blank" rel="noopener">givers.work</a> で稼働中です。
+            「<strong>AI 駆動開発の凄み</strong>」を強く実感した体験で、UNOES の1年が嘘のような速度感でした。
+            <br /><br />
+            <em>※ サービスとしてはまだ未完成で、機能の磨き込みは継続中です。</em>
+          </p>
+
+          <p class="service-desc">
+            プロダクトのコンセプトは「クリエイターはGIVEする・利用者は応援したくなったらGIVEで返す」というゼロ手数料寄付プラットフォーム。
+            プロジェクトの月額コストと達成率を透明に表示することで、寄付者が安心して判断できることを目指しています。
+            ゼロ手数料を実現するために <strong>Stripe Connect (Express)</strong> を採用し、プラットフォームを介さずクリエイター本人へ直接送金されます。
+          </p>
+
+          <ul class="service-features">
+            <li>OAuth2 ログイン（Google / GitHub / Discord）+ セッション認証</li>
+            <li>Stripe Connect による直接送金 / 単発 & 定期寄付 / Webhook 連携</li>
+            <li>プロジェクトのコスト構造と達成率の可視化、マイルストーン通知</li>
+            <li>i18n（日本語 / 英語）対応、Astro Islands + React で SSR / CSR を最適化</li>
+            <li>Playwright による E2E テスト（auth / donation / webhook / admin など全12スイート）</li>
+            <li>ConoHa VPS + Docker Compose + Nginx で本番運用、TLS 自動更新</li>
+          </ul>
+
+          <div class="service-meta">
+            <div class="meta-block">
+              <div class="meta-label">ライブURL</div>
+              <a class="meta-link" href="https://givers.work/" target="_blank" rel="noopener">givers.work ↗</a>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">リポジトリ</div>
+              <a class="meta-link" href="https://github.com/SeijiShii/givers" target="_blank" rel="noopener">github.com/SeijiShii/givers ↗</a>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">主要技術</div>
+              <div class="chip-row">
+                <span class="chip">Go 1.24</span>
+                <span class="chip">Astro 5</span>
+                <span class="chip">React 18</span>
+                <span class="chip">PostgreSQL 16</span>
+                <span class="chip">Stripe Connect</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Nginx</span>
+                <span class="chip">Playwright</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">開発規模 / 期間</div>
+              <ul class="meta-list">
+                <li>Backend Go: <strong>約 11,400 行</strong>（テスト除く） / Frontend: <strong>約 14,100 行</strong></li>
+                <li>SQL マイグレーション 34本 / E2E テスト 12スイート / 77コミット</li>
+                <li>期間: <strong>2026/02 – 進行中 / MVP公開まで約2週間</strong></li>
+                <li>ステータス: <strong>本番稼働中（機能拡張継続中・サービスとしては未完成）</strong></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section id="workflow" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">AI 駆動開発ワークフロー</h2>
+        <p class="section-lead">
+          UNOES の1年で「コピペ → IDE 補助 → エージェント駆動」と AI ツールを乗り換えて辿り着いた、
+          <strong>仕様・計画・テスト・実装・レビューを Markdown で残しながら AI と協働するワークフロー</strong>。
+          リポジトリ内に各機能の議事録が時系列で並び、将来の自分・他の開発者・AI 自身が同じ文脈に追いつけるようにしています。
+          GIVErS ではこのワークフローを最初から適用し、約2週間で本番投入できました。
+        </p>
+
+        <ol class="workflow">
+          <li class="workflow-step">
+            <span class="step-no">001</span>
+            <div>
+              <h4>SPEC — 仕様確定</h4>
+              <p>ユーザー要望（自分自身）を AI が整理し、明確化した仕様を表形式で記録。確認状況（Confirmed / Pending）まで明示。</p>
+            </div>
+          </li>
+          <li class="workflow-step">
+            <span class="step-no">002</span>
+            <div>
+              <h4>PLAN — 実装計画</h4>
+              <p>影響範囲・追加/変更ファイル・段階分けを AI とすり合わせ、設計判断は1つずつ「推奨＋理由」付きで決定する。</p>
+            </div>
+          </li>
+          <li class="workflow-step">
+            <span class="step-no">003 / 004</span>
+            <div>
+              <h4>UNIT_TEST / E2E_TEST — テスト設計</h4>
+              <p>実装前にテストケースを Markdown 化（TDD）。Playwright（Web）と Go test（バックエンド）で自動化。</p>
+            </div>
+          </li>
+          <li class="workflow-step">
+            <span class="step-no">101 / 102</span>
+            <div>
+              <h4>IMPL_REPORT — 実装レポート</h4>
+              <p>AI が実際に行った変更と判断理由を残す。GREEN 後に i18n / セキュリティ準拠を機械的にスキャン。</p>
+            </div>
+          </li>
+          <li class="workflow-step">
+            <span class="step-no">201</span>
+            <div>
+              <h4>FEEDBACK_REVIEW — 利用者フィードバック</h4>
+              <p>実機で確認した上での不具合・改善要望を AI と整理し、原因と修正範囲を文書化。</p>
+            </div>
+          </li>
+          <li class="workflow-step">
+            <span class="step-no">901</span>
+            <div>
+              <h4>REVIEW — 振り返り</h4>
+              <p>機能ごとに学びと再発防止策を CLAUDE.md / Memory に還元し、次のサイクルへ。</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="workflow-note">
+          <h4>ワークフローを支える小さな工夫</h4>
+          <ul>
+            <li><strong>CLAUDE.md / memory</strong> — プロジェクト固有のルール（i18n 準拠レビュー / デバッグログ方針 / 1問1答原則 等）を AI に常時参照させる</li>
+            <li><strong>機能フォルダ分割</strong> — <code>docs/&lt;機能名&gt;/001..901</code> の規約で、機能単位の文脈を1ディレクトリに閉じ込め</li>
+            <li><strong>段階レビューゲート</strong> — SPEC レビュー → PLAN レビュー → 実装 → REVIEW で stop the line を徹底</li>
+            <li><strong>機械チェック</strong> — 日本語ハードコード抽出、未使用コード検出、ビルド/型/lint を grep / script で自動化</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section">
+      <div class="container">
+        <h2 class="section-title">主な技術スタック</h2>
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h4>バックエンド</h4>
+            <ul>
+              <li>Go (net/http / Gin)</li>
+              <li>PostgreSQL 16 / SQL マイグレーション運用</li>
+              <li>JWT 認証 / セッション認証 / OAuth2</li>
+              <li>Stripe Connect / Stripe Subscription / Webhook</li>
+              <li>Google Play Billing / RTDN</li>
+              <li>レート制限・DOS 対策ミドルウェア</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>フロントエンド (Web)</h4>
+            <ul>
+              <li>Astro 5 + React 18 (Islands)</li>
+              <li>TypeScript / Tailwind 系設計</li>
+              <li>Playwright E2E</li>
+              <li>i18n (ja / en)</li>
+              <li>Server / Mock 切り替えによる開発体験</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>モバイル / マルチプラットフォーム</h4>
+            <ul>
+              <li>Flutter 3.x (iOS / Android / Web / Windows)</li>
+              <li>Provider 系の状態管理 / GoRouter</li>
+              <li>AdMob / AdSense ネイティブ広告</li>
+              <li>Google サインイン / In-App Purchase</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>インフラ / 運用</h4>
+            <ul>
+              <li>Docker / Docker Compose (dev / prod)</li>
+              <li>Nginx + Let's Encrypt (TLS 自動更新)</li>
+              <li>ConoHa VPS / Linux 運用</li>
+              <li>構造化ログ + ログローテーション</li>
+              <li>監査ログ / フィードバック収集</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>AI 駆動開発ツール</h4>
+            <ul>
+              <li>Claude Code（メイン）</li>
+              <li>Cursor（補助エディタ）</li>
+              <li>カスタム CLAUDE.md / memory 運用</li>
+              <li>Markdown 駆動の SPEC / PLAN / REVIEW</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <h4>品質・セキュリティ</h4>
+            <ul>
+              <li>Go test / Playwright / 手動テスト計画書</li>
+              <li>i18n ハードコード検出スクリプト</li>
+              <li>JWT ロール降格・期限切れの一貫処理</li>
+              <li>監査ログによる全操作トレーサビリティ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section id="metrics" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">数字で見るアウトプット</h2>
+        <p class="section-lead">2サービス合算のおおよその規模感。UNOES の <strong>1年（模索期）</strong> と GIVErS の <strong>2週間（確立後）</strong> の対比からも、ワークフローの効果がうかがえます。</p>
+
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-value">~70,000</div>
+            <div class="metric-label">行のプロダクションコード<br /><small>Go + TypeScript + Astro + Dart</small></div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">300+</div>
+            <div class="metric-label">コミット<br /><small>givers 77 / unoes_app 127 / unoes_flutter 110</small></div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">200+</div>
+            <div class="metric-label">設計・テスト・レビュー ドキュメント</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">5</div>
+            <div class="metric-label">配信ターゲット<br /><small>iOS / Android / Web / Windows / API</small></div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">2</div>
+            <div class="metric-label">決済プロバイダー統合<br /><small>Stripe Connect / Google Play</small></div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">本番稼働中<br /><small>givers.work / unoes.net</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>
+            四伊清司（Seiji Shii）。フルスタックエンジニア。
+            Go / TypeScript / Flutter / PostgreSQL を主軸に、AI と協働した開発手法でサービスを企画から本番運用まで一人で完結させることを得意としています。
+          </p>
+          <p>
+            UNOES の約1年に渡る試行錯誤を経て、<strong>「AI に書かせる」のではなく「AI と一緒に意思決定を文書で残す」</strong>スタイルに辿り着きました。
+            <strong>ドキュメント駆動 × TDD × 段階レビューゲート</strong>を組み合わせることで、個人開発でもチーム開発と同等のトレーサビリティを実現しています。
+            この方法論を最初から適用した GIVErS では約2週間で本番投入でき、AI 駆動開発の威力を強く実感しました
+            （※ GIVErS はサービスとしてはまだ未完成で、機能の磨き込みを継続しています）。
+          </p>
+          <p>
+            現在は AI 駆動開発に本気で取り組む組織で、よりインパクトの大きな開発に貢献することを志望しています。
+          </p>
+        </div>
+        <aside class="about-card">
+          <h4>Contact / Links</h4>
+          <ul class="link-list">
+            <li><a href="https://github.com/SeijiShii" target="_blank" rel="noopener">GitHub: SeijiShii ↗</a></li>
+            <li><a href="https://givers.work/" target="_blank" rel="noopener">GIVErS — givers.work ↗</a></li>
+            <li><a href="https://unoes.net/" target="_blank" rel="noopener">UNOES — unoes.net ↗</a></li>
+            <li><a href="mailto:seiji.shii@gmail.com">Email — seiji.shii@gmail.com</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Seiji Shii</span>
+      <span class="footer-meta">Built with HTML / CSS, deployed on GitHub Pages. Source: <a href="https://github.com/SeijiShii/ai-portfolio" target="_blank" rel="noopener">SeijiShii/ai-portfolio ↗</a></span>
+    </div>
+  </footer>
+</body>
+</html>
